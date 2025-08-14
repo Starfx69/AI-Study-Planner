@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">AI Study Partner</div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <div class="logo-img">AI</div>
+                <div class="logo-text">AI<span>Study</span>Partner</div>
+            </div>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#signup" class="cta-button">Get Started</a>
+            <div class="hamburger">
+                <i class="ph-list"></i>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Your Intelligent Study Companion</h1>
+                <p>Revolutionize your learning with AI-powered personalized tutoring, 24/7</p>
+                <a href="#signup" class="cta-button hero-button">Start Free Trial</a>
+            </div>
+        </section>
+
+
+        <!-- Study Schedule Section -->
+<section id="study-schedule" class="study-schedule-section">
+    <h2 class="section-title">Your Study Schedule</h2>
+    
+    <div class="schedule-inputs">
+        <input type="text" id="task-name" placeholder="Task Name" />
+        <input type="text" id="subject-name" placeholder="Subject" />
+        <input type="datetime-local" id="task-date" />
+        <button id="add-task-btn" class="cta-button">Add Task</button>
+    </div>
+
+    <div id="tasks-list" class="tasks-list">
+        <!-- Tasks will appear here dynamically -->
+    </div>
+</section>
+
+
+
+        <!-- Chatbot Section -->
+        <section id="chatbot" class="chatbot-section">
+            <h2 class="section-title">Ask Your Study Partner</h2>
+            <div class="chatbot-container">
+                <div class="chat-window" id="chat-window">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type your question..." />
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">📚</div>
+                    <h3 class="feature-title">Personalized Learning</h3>
+                    <p class="feature-description">Adaptive algorithms tailor content to your learning style and pace
+                        for maximum efficiency.</p>
+                </div>
+
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">⏱️</div>
+                    <h3 class="feature-title">24/7 Availability</h3>
+                    <p class="feature-description">Get help whenever you need it, day or night, without waiting for
+                        office hours.</p>
+                </div>
+
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">🧠</div>
+                    <h3 class="feature-title">Memory Enhancement</h3>
+                    <p class="feature-description">Spaced repetition and active recall techniques to boost long-term
+                        retention.</p>
+                </div>
+
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">📊</div>
+                    <h3 class="feature-title">Progress Tracking</h3>
+                    <p class="feature-description">Detailed analytics to monitor your improvement and identify weak
+                        areas.</p>
+                </div>
+
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">💬</div>
+                    <h3 class="feature-title">Natural Conversations</h3>
+                    <p class="feature-description">Human-like interactions that make learning engaging and enjoyable.
+                    </p>
+                </div>
+
+                <div class="feature-card bevel-effect card-3d">
+                    <div class="feature-icon floating">🌐</div>
+                    <h3 class="feature-title">Multi-Subject Support</h3>
+                    <p class="feature-description">Comprehensive coverage across STEM, humanities, and professional
+                        subjects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">AI<span>Study</span>Partner</div>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#blog">Blog</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 AI Study Partner. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
